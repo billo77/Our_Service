@@ -1,0 +1,82 @@
+html {
+	font-family: tahoma;
+}
+body {
+	background: #222f3e;
+	color: white;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+.container > h1,
+.title {
+	font-family: tahoma;
+	font-weight: 300 !important;
+	letter-spacing: 1px;
+}
+.container > h1,
+.container > p {
+	text-align: center;
+}
+.services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 40px;
+}
+.service {
+	margin: 10px;
+	overflow: hidden;
+	padding: 35px 15px;
+	position: relative;
+	text-align: center;
+	transition: background-color 0.3s ease-in, transform 0.3s ease-in;
+	width: 200px;
+}
+.service:hover {
+	background: #8e44ad;
+	transform: translateY(-3px);
+}
+.service:before {
+	content: '';
+	border-width: 20px;
+	border-style: solid;
+	border-color: #222f3e #222f3e rgba(1, 1, 1, 0.4) rgba(0, 0, 0, 0.4);
+	position: absolute;
+	right: -40px;
+	top: -40px;
+	transition: right 0.3s ease-out, top 0.3s ease-out;
+}
+.service:hover::before {
+	right: 0;
+	top: 0;
+}
+.service > i {
+	display: block;
+	color: #8e44ad;
+	font-size: 4rem;
+	margin-bottom: 0.9rem;
+	transition: color 0.3s ease-out;
+}
+.service > .title {
+	font-weight: 900;
+	font-size: 1.2rem;
+	line-height: 1.55rem;
+	margin-bottom: 1rem;
+	text-transform: capitalize;
+	transition: color 0.3s ease-out;
+}
+.service > .description {
+	line-height: 1.55rem;
+	margin: 0;
+	transition: color 0.3s ease-out;
+}
+.service:hover > i,
+.service:hover > .title,
+.service:hover > .description {
+	color: white;
+}
